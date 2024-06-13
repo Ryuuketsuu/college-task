@@ -1,0 +1,535 @@
+*{
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --drk-clr: rgb(34, 34, 34);
+  --lght-clr: rgb();
+  --main-clr: rgb(200, 222, 255);
+}
+
+body{
+  background-color: var(--drk-clr);
+  color: var(--main-clr);
+}
+
+/*same properities*/
+header, .point, .portfolio, .projectType{
+  justify-content: center;
+  align-items: center;
+}
+
+.description, .btn-text, .projectType, footer, .work{
+  text-align: center;
+}
+
+/*header*/
+header, .projectType{
+  display: flex;
+  flex-direction: column;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--drk-clr);
+  width: 100%;
+
+  a{
+    padding: 20px 15px 15px;
+    color: var(--main-clr);
+    line-height: 0.5;
+  }
+
+  #me{
+    padding: 15px;
+    font-weight: 600;
+  }
+}
+
+.description{
+  padding: 30px;
+
+  .spheres{
+    font-size: 16px;
+  }
+  .main{
+    font-size: 36px;
+    font-weight: 800;
+  }
+  .light{
+    font-size: 30px;
+  }
+  .strong{
+    font-size: 34px;
+  }
+}
+
+.point{
+  background-color: var(--main-clr);
+  width: 100%;
+  height: 25px;
+  display: flex;
+
+  .point-crcl{
+    background-color: var(--drk-clr);
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.aboutMe{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+
+  p{
+    margin: 0;
+  }
+
+  a{
+    text-align: center;
+
+    .semicircle-btn{
+      width: 100px;
+      height: 50px;
+      background-color: var(--main-clr);
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    
+      .btn-text{
+        text-align: center;
+        font-size: 15px;
+        color: var(--drk-clr);
+      }
+    }
+  }
+}
+
+/*portfolio and works*/
+main{}
+
+.portfolio{
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid var(--main-clr);
+  border-bottom: 2px solid var(--main-clr);
+
+  .folio, .port{
+    font-size: 52px;
+  }
+  .full{
+    display: none;
+  }
+  .point-crcl-2{
+    background-color: var(--main-clr);
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+  }
+  .point-crcl-2:nth-child(2), .full-2{
+    display: none;
+  }
+}
+
+.work{
+  padding: 30px;
+
+  img{
+    border: 1px solid  var(--main-clr);
+    border-radius: 20px;
+    width: 260px;
+    height: 196px;
+  }
+
+  h2{}
+
+  p{}
+}
+
+.projectType{
+  margin: 0 0 30px;
+}
+
+button{
+  background-color: var(--main-clr);
+  color: var(--drk-clr);
+  border: none;
+  cursor: pointer;
+  border: 1px solid var(--main-clr);
+  border-radius: 20px;
+  padding: 10px 25px;
+}
+button:hover{
+  background-color: var(--drk-clr);
+  color: var(--main-clr);
+}
+
+/*footer*/
+footer{
+
+  .creative{
+    font-size: 24px;
+  }
+
+  .code{
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .quality{
+    font-size: 28px;
+  }
+}
+
+.socialIcons{
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin: 15px;
+
+  .bx{
+    color: var(--main-clr);
+    border: 1px solid var(--drk-clr);
+    border-radius: 50%;
+    font-size: 30px;
+  }
+
+  .bx:hover{
+    color: var(--drk-clr);
+    background-color: var(--main-clr);
+    border: 1px solid var(--main-clr);
+    border-radius: 50%;
+  }
+}
+
+/*устройства до 479px*/
+@media (max-width: 480px){
+  .socialIcons {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto auto;
+  }
+
+  .socialIcons button {
+    grid-column: 1 / -1; /* Кнопка занимает всю ширину */
+    grid-row: 1; /* Кнопка на первой строке */
+  }
+  
+  .socialIcons a {
+    grid-row: 2; /* Иконки на второй строке */
+  }
+
+  .semicircle-btn{
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+
+  .point-crcl-2{
+    margin: 0 10px;
+  }
+}
+
+/* Устройства от 480px до 768px */
+@media (min-width: 480px) and (max-width: 768px) {
+  .description{
+    .spheres{
+      font-size: 18px;
+    }
+    .main{
+      font-size: 40px;
+    }
+    .light{
+      font-size: 34px;
+    }
+    .strong{
+      font-size: 38px;
+    }
+  }
+
+  .aboutMe{
+    padding: 30px 120px;
+  }
+
+  .semicircle-btn{
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+
+  .portfolio{
+    justify-content: space-between;
+
+    .folio, .port{
+      font-size: 48px;
+    }
+    .full, .point-crcl-2:nth-child(2){
+      display: block;
+      font-size: 40px;
+    }
+  }
+
+  .work{
+    img{
+      width: 320px;
+      height: 240px;
+    }
+
+    h2{
+      font-size: 34px;
+    }
+  }
+
+  button{
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 15px;
+  }
+
+  .socialIcons {
+    align-items: center;
+    grid-template-columns: 0.3fr 0.3fr 1fr 0.3fr 0.3fr;
+    grid-template-rows: auto;
+
+    a:nth-child(){
+      grid-column: span 1;
+    }
+
+    button{
+      grid-column: 3;
+    }
+  }
+}
+
+/* Устройства от 769px до 1024px */
+@media (min-width: 769px) and (max-width: 1024px){
+  .description{
+    .spheres{
+      font-size: 30px;
+    }
+    .main{
+      font-size: 70px;
+    }
+    .light{
+      font-size: 60px;
+    }
+    .strong{
+      font-size: 64px;
+    }
+  }
+  
+  .aboutMe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+  
+    p{
+      font-size: 24px;
+      margin: 0;
+    }
+
+    a{
+      .semicircle-btn{
+        width: 70px;
+        height: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+      
+        .btn-text{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  .portfolio{
+    justify-content: space-between;
+
+    .folio, .port{
+      font-size: 48px;
+    }
+    .full, .full-2, .point-crcl-2:nth-child(2){
+      display: block;
+      font-size: 40px;
+    }
+    .point-crcl-3{
+      background-color: var(--main-clr);
+      border-radius: 100%;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .work{
+    padding: 60px;
+
+    img{
+      width: 400px;
+      height: 300px;
+    }
+  
+    h2{}
+  
+    p{}
+  }
+
+  .projectType{
+    margin: 0 0 40px;
+  }
+  
+  .projectType:nth-child(1), .projectType:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .projectType:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button{
+    font-size: 20px;
+    padding: 15px 25px;
+    border-radius: 30px;
+  }
+
+  .socialIcons {
+    align-items: center;
+    grid-template-columns: 0.3fr 0.3fr 1fr 0.3fr 0.3fr;
+    grid-template-rows: auto;
+
+    .bx{
+      font-size: 40px;
+    }
+
+    button{
+      grid-column: 3;
+    }
+
+    a:nth-child(){
+      grid-column: span 1;
+    }
+  }
+}
+
+@media (min-width: 1025px){
+  .description{
+    .spheres{
+      font-size: 30px;
+    }
+    .main{
+      font-size: 70px;
+    }
+    .light{
+      font-size: 60px;
+    }
+    .strong{
+      font-size: 64px;
+    }
+  }
+  
+  .aboutMe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 70px;
+  
+    p{
+      font-size: 24px;
+      margin: 0;
+    }
+
+    a{
+      .semicircle-btn{
+        width: 70px;
+        height: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+      
+        .btn-text{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  
+  .portfolio{
+    justify-content: space-between;
+
+    .folio, .port{
+      font-size: 48px;
+    }
+    .full, .full-2, .point-crcl-2:nth-child(2){
+      display: block;
+      font-size: 40px;
+    }
+    .point-crcl-3{
+      background-color: var(--main-clr);
+      border-radius: 100%;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .work{
+    padding: 60px;
+
+    img{
+      width: 600px;
+      height: 500px;
+    }
+  
+    h2{}
+  
+    p{}
+  }
+
+  .projectType{
+    margin: 0 0 40px;
+  }
+  
+  .projectType:nth-child(1), .projectType:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .projectType:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button{
+    font-size: 20px;
+    padding: 15px 25px;
+    border-radius: 30px;
+  }
+
+  .socialIcons {
+    align-items: center;
+    grid-template-columns: 0.3fr 0.3fr 1fr 0.3fr 0.3fr;
+    grid-template-rows: auto;
+
+    .bx{
+      font-size: 40px;
+    }
+
+    button{
+      grid-column: 3;
+    }
+
+    a:nth-child(){
+      grid-column: span 1;
+    }
+  }
+}
