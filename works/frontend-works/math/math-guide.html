@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="math-guide.css" rel="stylesheet" type="text/css">
+  <script src="mg(1-9).js" type="text/javascript"></script>
+  <script src="mg(10-19).js" type="text/javascript"></script>
+  <script src="mg(20-29).js" type="text/javascript"></script>
+  <title>HackMath</title>
+</head>
+<body>
+  <section class="words">
+    <h1>HackMath</h1>
+  </section>
+  <header>
+    <div>
+      <h1>Добро пожаловать в HackMath - ваш математический справочник</h1>
+      <p>
+        Здесь вы найдете обширную коллекцию математических задач разного уровня сложности и с формулами для решения.<br> HackMath поможет вам достичь успеха!
+      </p>
+    </div>
+  </header>
+
+  <h1>Выберите задачу</h1>
+  <main>
+    <section class="list">
+      <!--one-->
+      <button onclick="displayElement('contentOne')">Площадь и угол при основании равнобедренного треугольника</button>
+
+      <!--two-->
+      <button onclick="displayElement('contentTwo')">Площадь и периметр прямоугольника</button>
+
+      <!--three-->
+      <button onclick="displayElement('contentThree')">Скорость в конце пути и путь</button>
+
+      <!--four-->
+      <button onclick="displayElement('contentFour')">Площадь и периметр квадрата со стороной a</button>
+
+      <!--five-->
+      <button onclick="displayElement('contentFive')">Площадь и объем боковой поверхности параллелепипеда с 3 сторонами</button>   
+
+      <!--six-->
+      <button onclick="displayElement('contentSix')">Площадь кольца с внешним радиусом (R) и внутренним (r)</button>
+
+      <!--seven-->
+      <button onclick="displayElement('contentSeven')">Площадь боковой поверхности и объем цилиндра с радиусом основания и высотой</button>
+
+      <!--eight-->
+      <button onclick="displayElement('contentEight')">Площадь и периметр прямоугольного треугольника с катетами a, b и гипотенузой c</button>
+
+      <!--nine-->
+      <button onclick="displayElement('contentNine')">Площадь и объем поверхности куба со стороной a</button>
+
+      <!--ten-->
+      <button onclick="displayElement('contentTen')">Площадь и периметр треугольника со сторонами a, b, c</button>
+
+      <!--eleven-->
+      <button onclick="displayElement('contentEleven')">Площадь основания и объем цилиндра с радиусом основания r и высотой h</button>
+
+      <!--twelve-->
+      <button onclick="displayElement('contentTwelve')">Объем и площадь основания параллелепипеда со сторонами a, b, c</button>
+
+      <!--thirteen-->
+      <button onclick="displayElement('contentThirteen')">Площадь основания и объем конуса с радиусом основания r и высотой h</button>
+
+      <!--fourteen-->
+      <button onclick="displayElement('contentFourteen')">Гипотенузу и площадь прямоугольного треугольника с катетами a, b</button>
+
+      <!--fifteen-->
+      <button onclick="displayElement('contentFifteen')">Высоту и площадь равнобедренной трапеции с основаниями a, b (b > a) и углом при большем основании d</button>
+
+      <!--sixteen-->
+      <button onclick="displayElement('contentSixteen')">Площадь поверхности и объем шара радиуса R</button>
+
+      <!--seventeen-->
+      <button onclick="displayElement('contentSeventeen')">Скорость в конце пути и путь, пройденный телом за время t с ускорением a и начальной скорости v<sub>0</sub></button>
+
+      <!--eighteen-->
+      <button onclick="displayElement('contentEighteen')">Радиус круга вписанного в треугольник со сторонами a, b, c</button>
+
+      <!--nineteen-->
+      <button onclick="displayElement('contentNineteen')">Кинетическая энергия тела массой m, движущегося со скоростью v</button>
+
+      <!--twenty-->
+      <button onclick="displayElement('contentTwenty')">Площадь прямоугольного треугольника с гипотенузой c и с одним из катетов a</button>
+
+      <!--twentyone-->
+      <button onclick="displayElement('contentTwentyOne')">Периметр и площадь прямоугольного треугольника с катетами a, b</button>
+
+      <!--twentytwo-->
+      <button onclick="displayElement('contentTwentyTwo')">Высота и площадь равнобедренного треугольника с основанием a и углом при основании</button>
+
+      <!--twentythree-->
+      <button onclick="displayElement('contentTwentyThree')">Радиус круга, описанного вокруг треугольника со сторонами a, b, c</button>
+
+      <!--twentyfour-->
+      <button onclick="displayElement('contentTwentyFour')">Периметр и площадь параллелограмма со сторонами a, b и острым углом d</button>
+    </section>
+
+    <div class="sections">
+      <!--one-->
+      <section id="contentOne">
+        <div class="container">
+          <h1>Площадь и угол при основании равнобедренного треугольника</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = (a * h) / 2 (площадь)<br>
+              A = arctg(2h / a) (угол)
+            </p>
+            <div class="field">
+              <p>Введите основание (a)</p>
+              <input type="text" id="baseOne" name="radius" value="" onchange="calculateOne()">
+            </div>
+        
+            <div class="field">
+              <p>Введите высоту (h)</p>
+              <input type="text" id="heightOne" name="radius" value="" onchange="calculateOne()">
+            </div>
+          </div>
+        </div>
+        <div class="answer" id="answerOne"></div>
+      </section>
+
+      <!--two-->
+      <section id="contentTwo">
+        <div class="container">
+          <h1>Площадь и периметр прямоугольника</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = a * b (площадь)<br>
+              P = 2 * (a + b) (периметр)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="aSquare" name="radius" value="" onchange="calculateTwo()">
+            </div>
+        
+            <div class="field">
+              <p>Введите сторону (b)</p>
+              <input type="text" id="bSquare" name="radius" value="" onchange="calculateTwo()">
+            </div>
+          </div>
+          <div class="answer" id="answerTwo"></div>
+        </div>
+      </section>
+
+      <!--three-->
+      <section id="contentThree">
+        <div class="container">
+          <h1>Скорость в конце пути и путь</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = a * t<sup>2</sup> (путь)<br>
+              v = a * t (скорость в конце пути)
+            </p>
+            <div class="field">
+              <p>Введите ускорение (a)</p>
+              <input type="text" id="boost" name="radius" value="" onchange="calculateThree()">
+            </div>
+        
+            <div class="field">
+              <p>Введите время (t)</p>
+              <input type="text" id="time" name="radius" value="" onchange="calculateThree()">
+            </div>
+          </div>
+          <div class="answer" id="answerThree"></div>
+        </div>
+      </section>
+
+      <!--four-->
+      <section id="contentFour">
+        <div class="container">
+          <h1>Площадь и периметр квадрата со стороной a</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = a<sup>2</sup> (площадь)<br>
+              P = 4 * a (периметр)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="squareOneSide" name="radius" value="" onchange="calculateFour()">
+            </div>
+          </div>
+          <div class="answer" id="answerFour"></div>
+        </div>
+      </section>
+
+      <!--five-->
+      <section id="contentFive">
+        <div class="container">
+          <h1>Площадь и объем боковой поверхности параллелепипеда с 3 сторонами</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = 2 * (a + b) * c (площадь)<br>
+              V = a * b * c (объем)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="parallelSideA" name="radius" value="" onchange="calculateFive()">
+            </div>
+        
+            <div class="field">
+              <p>Введите сторону (b)</p>
+              <input type="text" id="parallelSideB" name="radius" value="" onchange="calculateFive()">
+            </div>
+        
+            <div class="field">
+              <p>Введите сторону (c)</p>
+              <input type="text" id="parallelSideC" name="radius" value="" onchange="calculateFive()">
+            </div>
+          </div>  
+          <div class="answer" id="answerFive"></div>
+        </div>
+      </section>
+
+      <!--six-->
+      <section id="contentSix">
+        <div class="container">
+          <h1>Площадь кольца с внешним радиусом (R) и внутренним (r)</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = PI * (R<sup>2</sup> - r<sup>2</sup>) (площадь)<br>
+            </p>
+            <div class="field">
+              <p>Введите внешний радиус (R)</p>
+              <input type="text" id="outRadius" name="radius" value="" onchange="calculateSix()">
+            </div>
+        
+            <div class="field">
+              <p>Введите внутренний радиус (r)</p>
+              <input type="text" id="inRadius" name="radius" value="" onchange="calculateSix()">
+            </div>
+          </div>
+          <div class="answer" id="answerSix"></div>
+        </div>
+      </section>
+
+      <!--seven-->
+      <section id="contentSeven">
+        <div class="container">
+          <h1>Площадь боковой поверхности и объем цилиндра с радиусом основания и высотой</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = 2 * PI * r * h (площадь)<br>
+              P = PI * r<sup>2</sup> * h (объем)
+            </p>
+            <div class="field">
+              <p>Введите радиус (r)</p>
+              <input type="text" id="cilRadius" name="radius" value="" onchange="calculateSeven()">
+            </div>
+        
+            <div class="field">
+              <p>Введите высоту (h)</p>
+              <input type="text" id="cilHeight" name="radius" value="" onchange="calculateSeven()">
+            </div>
+          </div>
+          <div class="answer" id="answerSeven"></div>
+        </div>
+      </section>
+
+      <!--eight-->
+      <section id="contentEight">
+        <div class="container">
+          <h1>Площадь и периметр прямоугольного треугольника с катетами a, b и гипотенузой c</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = a * b / 2 (площадь)<br>
+              P = a + b + c (периметр)
+            </p>
+            <div class="field">
+              <p>Введите катет (a)</p>
+              <input type="text" id="aSide" name="radius" value="" onchange="calculateEight()">
+            </div>
+        
+            <div class="field">
+              <p>Введите катет (b)</p>
+              <input type="text" id="bSide" name="radius" value="" onchange="calculateEight()">
+            </div>
+        
+            <div class="field">
+              <p>Введите гипотенузу (c)</p>
+              <input type="text" id="cSide" name="radius" value="" onchange="calculateEight()">
+            </div>
+          </div>
+          <div class="answer" id="answerEight"></div>
+        </div>
+      </section>
+
+      <!--nine-->
+      <section id="contentNine">
+        <div class="container">
+          <h1>Площадь и объем поверхности куба со стороной a</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = 6 * a<sup>2</sup> (площадь)<br>
+              V = a<sup>3</sup> (объем)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="oneSide" name="radius" value="" onchange="calculateNine()">
+            </div>
+          </div>
+          <div class="answer" id="answerNine"></div>
+        </div>
+      </section>
+
+      <!--ten-->
+      <section id="contentTen">
+        <div class="container">
+          <h1>Площадь и периметр треугольника со сторонами a, b, c</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              P = a + b + c (периметр)<br>
+              p = P / 2 (пол периметра)<br>
+              S = √(p(p - a)(p - b)(p - c)) (площадь)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="aSide1" name="radius" value="" onchange="calculateTen()">
+
+              <p>Введите сторону (b)</p>
+              <input type="text" id="bSide1" name="radius" value="" onchange="calculateTen()">
+
+              <p>Введите сторону (c)</p>
+              <input type="text" id="cSide1" name="radius" value="" onchange="calculateTen()">
+            </div>
+          </div>
+          <div class="answer" id="answerTen"></div>
+        </div>
+      </section>
+
+      <!--eleven-->
+      <section id="contentEleven">
+        <div class="container">
+          <h1>Площадь основания и объем цилиндра с радиусом основания r и высотой h</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = PI * r<sup>2</sup> (площадь)<br>
+              V = S * h (объем)
+            </p>
+            <div class="field">
+              <p>Введите радиус основания (r)</p>
+              <input type="text" id="radius" name="radius" value="" onchange="calculateEleven()">
+        
+              <p>Введите высоту (h)</p>
+              <input type="text" id="height" name="radius" value="" onchange="calculateEleven()">
+            </div>
+          </div>
+          <div class="answer" id="answerEleven"></div>
+        </div>
+      </section>
+
+      <!--twelve-->
+      <section id="contentTwelve">
+        <div class="container">
+          <h1>Объем и площадь основания параллелепипеда со сторонами a, b, c</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = a * b (площадь)<br>
+              V = a * b * c (объем)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="aSide2" name="radius" value="" onchange="calculateTwelve()">
+        
+              <p>Введите сторону (b)</p>
+              <input type="text" id="bSide2" name="radius" value="" onchange="calculateTwelve()">
+        
+              <p>Введите сторону (c)</p>
+              <input type="text" id="cSide2" name="radius" value="" onchange="calculateTwelve()">
+            </div>
+          </div>
+          <div class="answer" id="answerTwelve"></div>
+        </div>
+      </section>
+
+      <!--thirteen-->
+      <section id="contentThirteen">
+        <div class="container">
+          <h1>Площадь основания и объем конуса с радиусом основания r и высотой h</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = PI * r<sup>2</sup> (площадь)<br>
+              V = S * h / 3 (объем)
+            </p>
+            <div class="field">
+              <p>Введите радиус основания (r)</p>
+              <input type="text" id="radius1" name="radius" value="" onchange="calculateThirteen()">
+        
+              <p>Введите высоту (h)</p>
+              <input type="text" id="height1" name="radius" value="" onchange="calculateThirteen()">
+            </div>
+          </div>
+          <div class="answer" id="answerThirteen"></div>
+        </div>
+      </section>
+
+      <!--fourteen-->
+      <section id="contentFourteen">
+        <div class="container">
+          <h1>Гипотенузу и площадь прямоугольного треугольника с катетами a, b</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              c = √(a<sup>2</sup> + b<sup>2</sup>) (гипотенуза)<br>
+              S = a * b / 2 (площадь)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="aSide3" name="radius" value="" onchange="calculateFourteen()">
+        
+              <p>Введите сторону (b)</p>
+              <input type="text" id="bSide3" name="radius" value="" onchange="calculateFourteen()">
+            </div>
+          </div>
+          <div class="answer" id="answerFourteen"></div>
+        </div>
+      </section>
+
+      <!--fifteen-->
+      <section id="contentFifteen">
+        <div class="container">
+          <h1>Высоту и площадь равнобедренной трапеции с основаниями a, b (b > a) и углом при большем основании d</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              h = (b - a) / 2 * tan(d) (высота)<br>
+              S = (b + a) / 2 * h (площадь)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="aSide4" name="radius" value="" onchange="calculateFifteen()">
+        
+              <p>Введите сторону (b)</p>
+              <input type="text" id="bSide4" name="radius" value="" onchange="calculateFifteen()">
+        
+              <p>Введите угол (d)</p>
+              <input type="text" id="angle4" name="radius" value="" onchange="calculateFifteen()">
+            </div>
+          </div>
+          <div class="answer" id="answerFifteen"></div>
+        </div>
+      </section>
+
+      <!--sixteen-->
+      <section id="contentSixteen">
+        <div class="container">
+          <h1>Площадь поверхности и объем шара радиуса R</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = 4 * PI * R<sup>3</sup> (площадь)<br>
+              V = (4 / 3) * PI * R<sup>3</sup> (объем)
+            </p>
+            <div class="field">
+              <p>Введите радиус (R)</p>
+              <input type="text" id="radius2" name="radius" value="" onchange="calculateSixteen()">
+            </div>
+          </div>
+          <div class="answer" id="answerSixteen"></div>
+        </div>
+      </section>
+
+      <!--seventeen-->
+      <section id="contentSeventeen">
+        <div class="container">
+          <h1>Скорость в конце пути и путь, пройденный телом за время t с ускорением a и начальной скорости v<sub>0</sub></h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              S = v<sub>0</sub> * t + ((a * t<sup>2</sup>) / 2) (путь)<br>
+              V = v<sub>0</sub> + a * t (скорость в конце пути)
+            </p>
+            <div class="field">
+              <p>Введите начальную скорость (v<sub>0</sub>)</p>
+              <input type="text" id="startSpeed" name="radius" value="" onchange="calculateSeventeen()">
+        
+              <p>Введите время (t)</p>
+              <input type="text" id="time1" name="radius" value="" onchange="calculateSeventeen()">
+        
+              <p>Введите ускорение (a)</p>
+              <input type="text" id="boost1" name="radius" value="" onchange="calculateSeventeen()">
+            </div>
+          </div>
+          <div class="answer" id="answerSeventeen"></div>
+        </div>
+      </section>
+
+      <!--eighteen-->
+      <section id="contentEighteen">
+        <div class="container">
+          <h1>Радиус круга вписанного в треугольник со сторонами a, b, c</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              p = (a + b + c) / 2 (пол периметра)<br>
+              r = √((p - a)(p - b)(p - c) / 2) (объем)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="aSide5" name="radius" value="" onchange="calculateEighteen()">
+        
+              <p>Введите сторону (b)</p>
+              <input type="text" id="bSide5" name="radius" value="" onchange="calculateEighteen()">
+        
+              <p>Введите сторону (c)</p>
+              <input type="text" id="cSide5" name="radius" value="" onchange="calculateEighteen()">
+            </div>
+          </div>
+          <div class="answer" id="answerEighteen"></div>
+        </div>
+      </section>
+
+      <!--nineteen-->
+      <section id="contentNineteen">
+        <div class="container">
+          <h1>Кинетическая энергия тела массой m, движущегося со скоростью v</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              E<sub>k</sub> = (m * v<sup>2</sup>) / 2 (Кинетическая энергия)
+            </p>
+            <div class="field">
+              <p>Введите массу тела (m)</p>
+              <input type="text" id="mass" name="radius" value="" onchange="calculateNineteen()">
+        
+              <p>Введите скорость (v)</p>
+              <input type="text" id="speed" name="radius" value="" onchange="calculateNineteen()">
+            </div>
+          </div>
+          <div class="answer" id="answerNineteen"></div>
+        </div>
+      </section>
+
+      <!--twenty-->
+      <section id="contentTwenty">
+        <div class="container">
+          <h1>Площадь прямоугольного треугольника с гипотенузой c и с одним из катетов a</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              b = √(c<sup>2</sup> - a<sup>2</sup>) (катет)<br>
+              s = (a * b) / 2 (площадь)
+            </p>
+            <div class="field">
+              <p>Введите катет (a)</p>
+              <input type="text" id="catet" name="radius" value="" onchange="calculateTwenty()">
+        
+              <p>Введите гипотенузу (c)</p>
+              <input type="text" id="gipotenuse" name="radius" value="" onchange="calculateTwenty()">
+            </div>
+          </div>
+          <div class="answer" id="answerTwenty"></div>
+        </div>
+      </section>
+
+      <!--twentyOne-->
+      <section id="contentTwentyOne">
+        <div class="container">
+          <h1>Периметр и площадь прямоугольного треугольника с катетами a, b</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              P = a + b + √(a<sup>2</sup> + b<sup>2</sup>) (периметр)<br>
+              S = (a * b) / 2 (площадь)
+            </p>
+            <div class="field">
+              <p>Введите катет (a)</p>
+              <input type="text" id="aCat" name="radius" value="" onchange="calculateTwentyOne()">
+        
+              <p>Введите катет (b)</p>
+              <input type="text" id="bCat" name="radius" value="" onchange="calculateTwentyOne()">
+            </div>
+          </div>
+          <div class="answer" id="answerTwentyOne"></div>
+        </div>
+      </section>
+
+      <!--twentyTwo-->
+      <section id="contentTwentyTwo">
+        <div class="container">
+          <h1>Высота и площадь равнобедренного треугольника с основанием a и углом при основании</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              h = a / 2 * tan(d) (высота)<br>
+              S = (a * h) / 2 (площадь)
+            </p>
+            <div class="field">
+              <p>Введите основание (a)</p>
+              <input type="text" id="base" name="radius" value="" onchange="calculateTwentyTwo()">
+        
+              <p>Введите угол основания (d)</p>
+              <input type="text" id="angBase" name="radius" value="" onchange="calculateTwentyTwo()">
+            </div>
+          </div>
+          <div class="answer" id="answerTwentyTwo"></div>
+        </div>
+      </section>
+
+      <!--twentyThree-->
+      <section id="contentTwentyThree">
+        <div class="container">
+          <h1>Радиус круга, описанного вокруг треугольника со сторонами a, b, c</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              p = (a + b + c) / 2 (пол периметра)<br>
+              V = (a * b * c) / 4 * √(p(p - a)(p - b)(p - c)) (площадь)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="aSide6" name="radius" value="" onchange="calculateTwentyThree()">
+        
+              <p>Введите сторону (b)</p>
+              <input type="text" id="bSide6" name="radius" value="" onchange="calculateTwentyThree()">
+        
+              <p>Введите сторону (c)</p>
+              <input type="text" id="cSide6" name="radius" value="" onchange="calculateTwentyThree()">
+            </div>
+          </div>
+          <div class="answer" id="answerTwentyThree"></div>
+        </div>
+      </section>
+
+      <!--twentyFour-->
+      <section id="contentTwentyFour">
+        <div class="container">
+          <h1>Периметр и площадь параллелограмма со сторонами a, b и острым углом d</h1>
+          <div class="content">
+            <p>
+              Формула: <br>
+              P = 2 * (a + b) (периметр)<br>
+              S = a * b * sin(d) (площадь)
+            </p>
+            <div class="field">
+              <p>Введите сторону (a)</p>
+              <input type="text" id="aSide7" name="radius" value="" onchange="calculateTwentyFour()">
+        
+              <p>Введите сторону (b)</p>
+              <input type="text" id="bSide7" name="radius" value="" onchange="calculateTwentyFour()">
+        
+              <p>Введите острый угол (d)</p>
+              <input type="text" id="sharpAng" name="radius" value="" onchange="calculateTwentyFour()">
+            </div>
+          </div>
+          <div class="answer" id="answerTwentyFour"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
